@@ -1,0 +1,9 @@
+name: Comprovacions
+on: push
+jobs:
+  comprovar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Comprova que index.html existeix
+        run: test -f index.html
